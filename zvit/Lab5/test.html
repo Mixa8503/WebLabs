@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    #accordion {
+      margin-top: 10px;
+    }
+
+    #slider {
+      margin-top: 10px;
+    }
+
+    #slider .ui-slider-handle {
+      cursor: pointer;
+    }
+
+    #sliderValue {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Datepicker
+      $("#datepicker").datepicker();
+
+      // Accordion
+      $("#accordion").accordion();
+
+      // Slider
+      $("#slider").slider({
+        min: 1,
+        max: 100,
+        slide: function(event, ui) {
+          $("#sliderValue").text(ui.value);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>jQuery Elements</h1>
+  
+    <label for="datepicker">Date:</label>
+    <input type="text" id="datepicker">
+
+    <div id="accordion">
+      <h3>Hello</h3>
+      <div>
+        <p>How are you?</p>
+        <p>Hope you're having a great day!</p>
+        <p>Feel free to ask if you have any questions.</p>
+      </div>
+    </div>
+
+    <label for="slider">Slider:</label>
+    <div id="slider"></div>
+    <p id="sliderValue"></p>
+  </div>
+</body>
+</html>

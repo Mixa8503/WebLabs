@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #efefef;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 4px 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.nav li {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.nav a,
+.city {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.nav a:hover,
+#city:hover {
+    background-color: white;
+    color: black;
+}
+#city {
+    padding: 10px 90px;
+    background-color: #696969;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.block {
+    flex: 1;
+    text-align: center;
+    background-color: #fff;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    padding: 0px 10px;
+    max-width: 200px;
+}
+img {
+    height: 130px;
+    width: 200px;
+}
+.photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photo-row img {
+    flex: 1;
+    text-align: center;
+    margin-right: 80px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 300px;
+    max-width: 300px;
+}
+.photo-text-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.photo-text-row img {
+    height: 350px;
+    width: 500px;
+    max-width: 500px;
+}
+.text {
+    height: 180px;
+    width: 600px;
+    float: right;
+    padding: 0 20px;
+    text-align: left;
+}
+.text p {
+    margin-top: -20px;
+}
+span {
+    color: #00ffff;
+}
+@media (max-width: 100px) {
+    .nav,
+    .photo-text-row {
+        flex-direction: column;
+    }
+}

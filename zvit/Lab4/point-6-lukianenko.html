@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        text-align: center;
+        color: #333333;
+      }
+
+      .container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #666666;
+      }
+
+      .container input[type="text"],
+      .container input[type="number"],
+      .container input[type="password"],
+      .container input[type="someDate"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      .container input[type="submit"] {
+        background-color: #534caf;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .container input[type="submit"]:hover {
+        background-color: #534caf;
+      }
+    </style>
+    <script src="../../Лаб4/point-6-lukianenko.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <b>Завдання </b>
+      </br>
+      <br>
+      <b>Валідація HTML-форми реєстрації користувача </b> Забезпечити перевірку елементів HTML-форми таких видів: ціле число, дійсне число, дата у форматі DD.MM.YYYY, однаковість даних у полях введення паролю (основне та перевірочне). Крім того, забезпечити перевірку введення обов‘язкових полів, помічених (*). </br>
+      <h2>Реєстраційна форма</h2>
+      <form name="myForm" onsubmit="return validateForm()">
+        <label for="accountName">Назва акаунту *</label>
+        <input type="text" id="accountName" name="accountName" required>
+        <label for="age">Вік *</label>
+        <input type="number" id="age" name="age" required>
+        <label for="dateOfBirth">Дата народження *</label>
+        <input type="someDate" id="date" name="date" required>
+        <label for="password">Пароль *</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirmPassword">Введіть пароль повторно *</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <button type="submit">Відправити</button>
+      </form>
+      <br>
+      <b>JS - код</b>
+      <img src="images/jscode2.png" alt="js-code" width="800">
+      <br>
+      <b>Посилання на HTML-код сторінки:</b>
+      <a href="https://github.com/YarKo04/WEB-labs/blob/master/zvit/Lab4/point-6-lukianenko.html" target="_blank">https://github.com/YarKo04/WEB-labs/blob/master/zvit/Lab4/point-6-sedush.html</a>
+    </div>
+  </body>
+</html>

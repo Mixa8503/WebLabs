@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="UTF-8">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<h1>Звіти з лабараторних робіт з дисципліни "WEB орієнтовані технології. Основи FRONTEND та BACKEND розробок."</h1>
+<h2>Бригада № 38</h2>
+<p>Студент: Лук'яненко Михайло(ІП-04)
+<div>
+    <button id = "lab1">Лабораторна робота №1</button>
+    <button id = "lab2">Лабораторна робота №2</button>
+    <button id = "lab3">Лабораторна робота №3</button>
+    <button id = "lab4">Лабораторна робота №4</button>
+    <button id = "lab5">Лабораторна робота №5</button>
+    <button id = "lab6">Лабораторна робота №6</button>
+    <button id = "lab7">Лабораторна робота №7</button>
+    <button id = "lab8">Лабораторна робота №8</button>
+    <button id = "lab9">Лабораторна робота №9</button>
+</div>
+
+<!-- Vertical buttons -->
+<div class="container">
+    <ul class="list">
+        <li><a class="item" href="theme.html">Тема, мета, місце розташування WEB-застосунку</a></li>
+        <li><a class="item" href="options.html">Способи підключення стилів</a></li>
+        <li><a class="item" href ="selectors.html">СЕЛЕКТОРИ</a></li>
+        <li><a class="item" href="css.html">CSS</a></li>
+        <li><a class="item" href="summary.html">Висновки</a></li>
+    </ul>
+</div>
+
+
+<script>
+    const lab1 = document.getElementById('lab1');
+    const lab2 = document.getElementById('lab2');
+    const lab3 = document.getElementById('lab3');
+    const lab4 = document.getElementById('lab4');
+    const lab5 = document.getElementById('lab5');
+    const lab6 = document.getElementById('lab6');
+    const lab7 = document.getElementById('lab7');
+    const lab8 = document.getElementById('lab8');
+    const lab9 = document.getElementById('lab9');
+    lab1.addEventListener('click', () => {
+        window.location.href = '../Lab1/lab1.html';
+    });
+    lab2.addEventListener('click', () => {
+        window.location.href = 'lab2.html';
+    });
+    lab3.addEventListener('click', () => {
+        window.location.href = '../Lab3/lab3.html';
+    });
+    lab4.addEventListener('click', () => {
+        window.location.href = '../Lab4/lab4.html';
+    });
+    lab5.addEventListener('click', () => {
+        window.location.href = '../Lab5/lab5.html';
+    });
+    lab6.addEventListener('click', () => {
+        window.location.href = '../Lab6/lab6.html';
+    });
+    lab7.addEventListener('click', () => {
+        window.location.href = '../Lab7/lab7.html';
+    });
+    lab8.addEventListener('click', () => {
+        window.location.href = '../Lab8/lab8.html';
+    });
+    lab9.addEventListener('click', () => {
+        window.location.href = '../Lab9/lab9.html';
+    });
+</script>
+
+</body>
+</html>

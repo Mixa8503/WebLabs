@@ -1,0 +1,226 @@
+/* Tag selectors */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Class selectors */
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #222;
+  color: #fff;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ol {
+  margin-left: 40px;
+}
+
+.selectors > b+i {
+  color: blue;
+}
+
+p[lang="ua"] {
+  text-decoration-style: dashed;
+  font-family: monospace;
+}
+
+.kontur {
+  color: #222;
+  animation-name: kontur;
+  animation-duration: 2s;
+}
+
+@keyframes kontur {
+  from {
+    outline-width: none;
+    outline-style: none;
+  }
+  to {
+    outline-width: 2px;
+    outline-style: dotted;
+  }
+}
+
+.choose_us {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  height: 100%;
+}
+
+.choose_us > li {
+  display: inline-block;
+  position: relative;
+}
+
+.choose_us ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  padding: 0;
+}
+
+.choose_us > li:hover > ul {
+  display: block;
+}
+
+.choose_us ul li {
+  width: 100%;
+  display: list-item;
+  position: relative;
+}
+
+.choose_us a {
+  display: block;
+  padding: 0 50px;
+  color: #555;
+  font-size: 14px;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.choose_us ul a {
+  line-height: 40px;
+}
+
+.choose_us a:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+.choose_us ul li:hover > a {
+  background-color: #666;
+  color: #fff;
+}
+
+.choose_us > li:hover > a {
+  background-color: #555;
+  color: #fff;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  }
+  
+  footer p {
+  margin: 0;
+  }
+  
+  /* ID selector */
+  
+  #car-image {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  }
+  
+  /* Attribute selector */
+  
+  a[href="https://en.wikipedia.org/wiki/Sports_car"] {
+  color: red;
+  }
+  
+  /* Pseudo-class selector */
+  
+  li.highlight:hover {
+  color: yellow;
+  }
