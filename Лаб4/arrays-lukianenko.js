@@ -1,6 +1,5 @@
 let sortButton = document.querySelector("#sort");
 const result = document.querySelector(".result");
-let elements = document.querySelector("#elements").value
 
 function toArray(str) {
     let numberArray = String(str).split(',').map(x => parseInt(x));
@@ -8,49 +7,51 @@ function toArray(str) {
 }
 
 function findMaxEven(arr) {
-    let maxEven = arr[0]
+    let maxEven = arr[0];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0 && arr[i] > maxEven) {
             console.log(i);
-            maxEven = arr[i]
+            maxEven = arr[i];
         }
     }
-    return maxEven
+    return maxEven;
 }
 
 function findMinEven(arr) {
-    let minEven = Infinity
+    let minEven = Infinity;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0 && arr[i] < minEven) {
-            minEven = arr[i]
+            minEven = arr[i];
             console.log("cycle goes");
         }
     }
-    return minEven
+    return minEven === Infinity ? null : minEven;
 }
 
 function sortArray(arr) {
     for (let i = 1; i < arr.length; i++) {
-        let temp = arr[i]
-        let j = i - 1
+        let temp = arr[i];
+        let j = i - 1;
         while (j >= 0 && arr[j] > temp) {
-            arr[j + 1] = arr[j]
-            j--
+            arr[j + 1] = arr[j];
+            j--;
         }
-        arr[j + 1] = temp
+        arr[j + 1] = temp;
     }
 }
 
-
 function task2() {
-    let array = toArray(elements)
-    let minEven = array.indexOf(findMinEven(array))
-    let maxEven = array.indexOf(findMaxEven(array))
+    let elements = document.querySelector("#elements").value;
+    let array = toArray(elements);
+    let minEven = array.indexOf(findMinEven(array));
+    let maxEven = array.indexOf(findMaxEven(array));
     console.log(minEven,maxEven);
-    let temp = array[minEven]
-    array[minEven] = array[maxEven]
-    array[maxEven] = temp
-    result.innerHTML = `<br>smallest and biggest swapped : [13,8,26,14,111]`
-    sortArray(array)
-    result.innerHTML += `<br>array sorted : [8,13,14,26,111]`
+    if(minEven !== -1 && maxEven !== -1) {
+        let temp = array[minEven];
+        array[minEven] = array[maxEven];
+        array[maxEven] = temp;
+    }
+    result.innerHTML = `<br>smallest and biggest swapped : ${array.join(', ')}`
+    sortArray(array);
+    result.innerHTML += `<br>array sorted : ${array.join(', ')}`
 }
